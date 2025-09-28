@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    viewBox="0 0 600 120" style="background: linear-gradient(135deg, #0f0f23, #1a1a2e);"
+    width="600px" height="120px">
+
+    <defs>
+        <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#0f0f23" />
+            <stop offset="100%" stop-color="#1a1a2e" />
+        </linearGradient>
+        <linearGradient id="nameGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#00d9ff">
+                <animate attributeName="stop-color" values="#00d9ff;#3b82f6;#8b5cf6;#00d9ff"
+                    dur="6s" repeatCount="indefinite" />
+            </stop>
+            <stop offset="50%" stop-color="#3b82f6">
+                <animate attributeName="stop-color" values="#3b82f6;#8b5cf6;#00d9ff;#3b82f6"
+                    dur="6s" repeatCount="indefinite" />
+            </stop>
+            <stop offset="100%" stop-color="#8b5cf6">
+                <animate attributeName="stop-color" values="#8b5cf6;#00d9ff;#3b82f6;#8b5cf6"
+                    dur="6s" repeatCount="indefinite" />
+            </stop>
+        </linearGradient>
+    </defs>
+
+    <!-- Line 1: Name -->
+    <path id="path0">
+        <animate id="d0" attributeName="d" begin="0s;restart.begin+1s" dur="3000ms" fill="freeze"
+            values="m0,30 h0 ; m0,30 h0 ; m0,30 h600 ; m0,30 h600"
+            keyTimes="0;0.2;0.8;1" />
+        <animate id="reset0" attributeName="d" begin="d3.end+3s" dur="0.1s" fill="freeze"
+            values="m0,30 h600 ; m0,30 h0" />
+    </path>
+    <text font-family="'Fira Code', monospace" fill="url(#nameGrad)" font-size="24"
+        dominant-baseline="middle" x="50%" text-anchor="middle">
+        <textPath xlink:href="#path0">Azim Memon</textPath>
+    </text>
+
+    <!-- Line 2: Role -->
+    <path id="path1">
+        <animate id="d1" attributeName="d" begin="d0.end" dur="4000ms" fill="freeze"
+            values="m0,55 h0 ; m0,55 h0 ; m0,55 h600 ; m0,55 h600"
+            keyTimes="0;0.2;0.8;1" />
+        <animate id="reset1" attributeName="d" begin="reset0.end" dur="0.1s" fill="freeze"
+            values="m0,55 h600 ; m0,55 h0" />
+    </path>
+    <text font-family="'Fira Code', monospace" fill="#00D9FF" font-size="20"
+        dominant-baseline="middle" x="50%" text-anchor="middle">
+        <textPath xlink:href="#path1">Full-Stack Software Engineer</textPath>
+    </text>
+
+    <!-- Line 3: Specialization -->
+    <path id="path2">
+        <animate id="d2" attributeName="d" begin="d1.end" dur="4500ms" fill="freeze"
+            values="m0,80 h0 ; m0,80 h0 ; m0,80 h600 ; m0,80 h600"
+            keyTimes="0;0.2;0.8;1" />
+        <animate id="reset2" attributeName="d" begin="reset1.end" dur="0.1s" fill="freeze"
+            values="m0,80 h600 ; m0,80 h0" />
+    </path>
+    <text font-family="'Fira Code', monospace" fill="#8b5cf6" font-size="18"
+        dominant-baseline="middle" x="50%" text-anchor="middle">
+        <textPath xlink:href="#path2">Microservice • Blockchain • Cloud Architecture</textPath>
+    </text>
+
+    <!-- Line 4: Experience -->
+    <path id="path3">
+        <animate id="d3" attributeName="d" begin="d2.end" dur="3500ms" fill="freeze"
+            values="m0,105 h0 ; m0,105 h0 ; m0,105 h600 ; m0,105 h600"
+            keyTimes="0;0.2;0.8;1" />
+        <animate id="restart" attributeName="d" begin="reset2.end" dur="0.1s" fill="freeze"
+            values="m0,105 h600 ; m0,105 h0" />
+    </path>
+    <text font-family="'Fira Code', monospace" fill="#3b82f6" font-size="16"
+        dominant-baseline="middle" x="50%" text-anchor="middle">
+        <textPath xlink:href="#path3">Building scalable solutions for 3+ years</textPath>
+    </text>
+
+</svg>
